@@ -95,11 +95,6 @@
     pageCtrl.numberOfPages = _numOfViewsForScroller;//总的图片页数
 }
 
-//当它要添加一个子视图的时候，didMoveToSuperview 会发送消息给视图。这时正好可以更新滚动视图的内容。
-- (void)didMoveToSuperview{
-    [self reload];
-}
-
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     if (isAutoShow) {
         [_autoScrollTimer invalidate];
