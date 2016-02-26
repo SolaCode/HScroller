@@ -5,7 +5,7 @@
 HorizontalScroller *scroller = [[HorizontalScroller alloc] initWithFrame:yourFrame];
 scroller.delegate = self;
 [scroller reload];
-[scroller shouldAutoShow:NO];
+[scroller shouldAutoShow:YES];
 [self.view addSubview:scroller];
 ```
 ##### Delegate Method
