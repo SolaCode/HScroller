@@ -156,13 +156,20 @@
     }
 }
 
--(void)dealloc
+- (void)removeFromSuperview
 {
+    [super removeFromSuperview];
     if ([_autoScrollTimer isValid])
     {
         [_autoScrollTimer invalidate];
-        //NSLog(@"_autoScrollTimer销毁");
+        _autoScrollTimer = nil;
     }
+}
+
+-(void)dealloc
+{
+    NSLog(@"_autoScrollTimer销毁");
+    
 }
 
 @end
